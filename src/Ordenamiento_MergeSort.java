@@ -4,7 +4,7 @@ public class Ordenamiento_MergeSort {
 
   public static void main(String[] args) {
 
-    int[] n = { 5, 4, 3, 2, 1 };
+    int[] n = { 8, 0, 3, -1, 5, 7, 2 };
     System.out.println("Arreglo original: ");
     for (int i = 0; i < n.length; i++) {
       System.out.print(n[i] + " ");
@@ -24,9 +24,24 @@ public class Ordenamiento_MergeSort {
   public static void mergeSort(int[] arreglo, int inicio, int fin) {
     if (inicio < fin) {
       int medio = (inicio + fin) / 2;
+      System.out.println("Arreglo[inicio]: " + arreglo[inicio]);
+      System.out.println("Arreglo[medio]: " + arreglo[medio]);
+      System.out.println("Arreglo[fin]: " + arreglo[fin]);
       mergeSort(arreglo, inicio, medio);
+      System.out.println("------------------");
+      System.out.println("Arreglo[inicio]: " + arreglo[inicio]);
+      System.out.println("Arreglo[medio]: " + arreglo[medio]);
+      System.out.println("Arreglo[fin]: " + arreglo[fin]);
       mergeSort(arreglo, medio + 1, fin);
+      System.out.println("------------------");
+      System.out.println("Arreglo[inicio]: " + arreglo[inicio]);
+      System.out.println("Arreglo[medio]: " + arreglo[medio]);
+      System.out.println("Arreglo[fin]: " + arreglo[fin]);
       merge(arreglo, inicio, medio, fin);
+      System.out.println("------------------");
+      System.out.println("Arreglo[inicio]: " + arreglo[inicio]);
+      System.out.println("Arreglo[medio]: " + arreglo[medio]);
+      System.out.println("Arreglo[fin]: " + arreglo[fin]);
     }
   }
 
